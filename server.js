@@ -19,6 +19,6 @@ app.use("/api/import", ImportData);
 app.use("/api/products", productRoute);
 app.use("/api/users", userRoute);
 app.get("/", (req, res) => {
-  res.send("api running");
+  res.sendStatus(200);
 });
 app.listen(5000, console.log("app running...."));
