@@ -209,7 +209,7 @@ productRoute.delete(
 );
 
 productRoute.post("/add", protectAdmin, async (req, res) => {
-  const product = await Product.find({ id: req.params.id });
+  const product = await Product.find({ id: req.body.id });
   if (product) {
     res.status(401).json({ msg: "Product Already Added In Store !" });
   } else {
